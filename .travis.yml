@@ -8,6 +8,7 @@ deploy:
     bucket: storageforgithubdeploy
     region: ap-northeast-2
     skip_cleanup: true
+    script: echo 's3 done!'
 
   - provider: codedeploy
     access_key_id: $access_key_id
