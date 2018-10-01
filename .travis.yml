@@ -10,7 +10,6 @@ deploy:
     skip_cleanup: true
   - provider: codedeploy	  
     access_key_id: $access_key_deployer_id
-    s3_key: 
     secret_access_key: $access_key_deployer
     bucket: storageforgithubdeploy	
     application: CodeDeployGitHubDemo-App	
