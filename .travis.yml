@@ -9,8 +9,6 @@ deploy:
     region: ap-northeast-2
     skip_cleanup: true
   - provider: codedeploy	  
-    access_key_id: $access_key_id	
-    secret_access_key: $access_key	
     bucket: storageforgithubdeploy	
     application: CodeDeployGitHubDemo-App	
     deployment_group: CodeDeployGitHubDemo-DepGrp	
