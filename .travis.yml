@@ -1,0 +1,31 @@
+branches:
+  only:
+  - master
+
+language: nodejs
+
+sudo: true
+install: true
+
+- provider: s3
+  access_key_id: AKIAJI5ETPA6DEKVPJ5Q
+  secret_access_key: 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
+  bucket: storageforgithubdeploy
+  region: ap-northeast-2
+  skip_cleanup: true
+
+- provider: codedeploy
+  access_key_id: AKIAJI5ETPA6DEKVPJ5Q
+  bucket: storageforgithubdeploy
+  key: WebApp1.zip
+  bundle_type: zip
+  application: CodeDeployGitHubDemo-App
+  deployment_group: CodeDeployGitHubDemo-DepGrp
+  region: ap-northeast-2
+  secret_access_key: 1kWWPw7X5kwP+ia9Q91I/bcnj2i8Z730NITm0HTY
+  wait-until-deployed: true
+
+notifications:
+  email:
+    recipients:
+      - su_l@ctrip.com
