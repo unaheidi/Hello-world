@@ -1,13 +1,3 @@
-branches:
-  only:
-  - master
-
-language: nodejs
-
-sudo: true
-install: true
-
-
 deploy:
   - provider: s3
     access_key_id: AKIAJI5ETPA6DEKVPJ5Q
