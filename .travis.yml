@@ -1,16 +1,13 @@
-language: javascript
+language: node_js
 script: echo 'abc'
 
 deploy:
-  script: echo 's3 copy kaishi!'
   - provider: s3
     access_key_id: $access_key_id
     secret_access_key: $access_key
     bucket: storageforgithubdeploy
     region: ap-northeast-2
     skip_cleanup: true
-  script: echo 's3 done!'
-
   - provider: codedeploy
     access_key_id: $access_key_id
     secret_access_key: $access_key
