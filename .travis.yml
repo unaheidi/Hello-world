@@ -11,7 +11,8 @@ deploy:
   - provider: codedeploy	  
     access_key_id: $access_key_deployer_id
     secret_access_key: $access_key_deployer
-    bucket: storageforgithubdeploy	
+    bucket: storageforgithubdeploy
+    bundle_type: zip
     application: CodeDeployGitHubDemo-App	
     deployment_group: CodeDeployGitHubDemo-DepGrp	
     region: ap-northeast-2	
